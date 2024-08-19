@@ -1,1 +1,28 @@
-Hello world
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RKC: PRIMA</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "RKC061522") {
+                window.location.href = "https://retrokidcody.github.io/DatabaseMain.html";
+                return false; // Prevent form submission
+            } else {
+                alert("Please try again.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>PRIMA Database Entry Point</h1>
+<p>Please log in to gain access to the RKC PRIMA Database Interface.</p>
+<form onsubmit="return checkPassword()">
+        <label for="password"></label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
